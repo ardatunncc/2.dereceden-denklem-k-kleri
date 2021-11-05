@@ -1,0 +1,62 @@
+package com.company.H5190027;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Soru
+        /*
+	 	ax^2 + bx + c = 0
+		a,b ve c ayarları kullanıcıdan girilmesi istenecektir.
+
+		Diskrement > ∆=b^2–4ac
+
+		öğrenmeyi hesaplamamız gerekir. Diskriminantın değerlerine göre, eğer ∆<0 ise denklemin gerçel sayılarıla sayısal bir ölçek yoktur.
+
+		∆=0 ise denklemin, aralarında eşit olan iki kaba vardır ve bunlar,
+
+		x1=x2=–b/(2a)
+		şeklinde hesaplanırlar. Bunlara iki kat kök ya da çakışık kök adı verilir.
+
+		∆>0 ise de denklemin farklı iki gerçel kabağı vardır ve bunlar,
+		x1=(b+√∆)/(2a)
+		ve
+		x2=(–b–√∆)/(2a)
+		şeklinde hesaplanırlar.
+	 */
+
+
+        //Cevap
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("a değerini giriniz :");
+        double a = sc.nextInt();
+        System.out.print("b değerini giriniz   :");
+        double b = sc.nextInt();
+        System.out.print("c değerini giriniz   :");
+        double c = sc.nextInt();
+
+        double delta = (b * b) - (4 * a * c);
+
+        if (delta > 0){
+            double x1 = ((-1 * b) - Math.sqrt(delta)) / (2 * a);
+            double x2 = ((-1 * b) + Math.sqrt(delta)) / (2 * a);
+            System.out.println("x1= " + x1 + " x2= " + x2);
+        }
+        if (delta < 0){
+            System.out.println("Denklemin Gerçel Kökü Yoktur.");
+        }
+        if (delta == 0){
+            double x = (-1 * b) / (2 * a);
+            System.out.println("Çakışık 2 kökü var x1= x2= " + x);
+        }
+
+
+
+
+
+
+    }
+}
